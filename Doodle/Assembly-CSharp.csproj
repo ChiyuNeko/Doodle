@@ -45,6 +45,7 @@
      <Compile Include="Assets\Stable-Diffusion-Unity-Integration\Scripts\StableDiffusionImage2Image.cs" />
      <Compile Include="Assets\Stable-Diffusion-Unity-Integration\Scripts\StableDiffusionGenerator.cs" />
      <Compile Include="Assets\Stable-Diffusion-Unity-Integration\Scripts\SDSettings.cs" />
+     <Compile Include="Assets\DrawLine.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity 2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
