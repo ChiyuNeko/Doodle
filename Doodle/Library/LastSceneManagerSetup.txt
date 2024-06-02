@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Stable-Diffusion-Unity-Integration/Scenes/DemoScene-NoPostProcessing.unity
+- path: Assets/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
