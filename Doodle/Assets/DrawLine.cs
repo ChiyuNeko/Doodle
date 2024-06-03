@@ -6,27 +6,39 @@ public class DrawLine : MonoBehaviour
 {
     private LineRenderer line;
     public float minDistance = 0.1f;
+    public float width;
     private Vector3 PreviousPos;
     public Transform cursor;
+
         
         void Start()
         {
             line = GetComponent<LineRenderer>();
+            line.positionCount = 1;
             PreviousPos = transform.position;
+            line.startWidth = line.endWidth = width;
         }
 
         void Update()
         {
-            // if(Input.GetKey(KeyCode.Space))
-            // {
-                Vector3 currentPos = cursor.position;
+            Vector3 currentPos = cursor.position;
+            if(Input.GetKey(KeyCode.Space))
+             {
                 if(Vector3.Distance(currentPos, PreviousPos) > minDistance)
                 {
-                    line.positionCount++;
-                    line.SetPosition(line.positionCount - 1, currentPos);
+                    if(PreviousPos == transform.position)
+                    {
+                        line.SetPosition(0, currentPos);
+                    }
+                    else
+                    {
+
+                        line.positionCount++;
+                        line.SetPosition(line.positionCount - 1, currentPos);
+                    }
                     PreviousPos = currentPos;
                 }
-            // }    
+             }    
 
         }
 }

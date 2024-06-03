@@ -57,7 +57,7 @@ public class MotionTracking : MonoBehaviour
         KalmanFilterTest kalmanFilter = new KalmanFilterTest(); // 正确初始化 KalmanFilterTest
 
         string portName = "COM3"; // 根据设备管理器修改
-        serialPort = new SerialPort(portName, 9600);
+        serialPort = new SerialPort(portName, 115200);
 
         // 设置读写超时
         serialPort.ReadTimeout = 10000;
@@ -127,7 +127,7 @@ public class MotionTracking : MonoBehaviour
 
 
         
-        gameObject.GetComponent<Rigidbody>().velocity = currentVelocity *3;
+        gameObject.GetComponent<Rigidbody>().velocity = currentVelocity ;
         Debug.Log(currentVelocity);
     }
 
