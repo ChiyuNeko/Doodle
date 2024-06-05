@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="20240605_002447" size="1.000000 1.488136" />
+    <ImageTarget name="20240604_224146_3" size="1.000000 0.313401" />
+    <ImageTarget name="20240605_000528" size="1.000000 0.904000" />
+    <ImageTarget name="20240604_224146_2" size="1.000000 0.313401" />
+    <ImageTarget name="20240604_224146" size="1.000000 0.750000" />
+  </Tracking>
+</QCARConfig>

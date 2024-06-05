@@ -22,6 +22,7 @@ public class MotionTrackinYPR : MonoBehaviour
     public Vector3 vec;
     public float distance;
     public float smooth;
+    public float speed;
     
 
     void Start()
@@ -50,8 +51,10 @@ public class MotionTrackinYPR : MonoBehaviour
         // 更新加速度数据
         UpdateAccelerationData();
 
-        currentVelocity.x = Mathf.Lerp(gameObject.transform.position.x, Mathf.Atan(currentAcceleration.x) * distance, 1f/smooth);
-        currentVelocity.y = Mathf.Lerp(gameObject.transform.position.y, Mathf.Atan(currentAcceleration.y) * distance, 1f/smooth);
+        //currentVelocity.x = Mathf.Lerp(gameObject.transform.position.x, Mathf.Atan(currentAcceleration.x) * distance, 1f/smooth);
+        //currentVelocity.y = Mathf.Lerp(gameObject.transform.position.y, Mathf.Atan(currentAcceleration.y) * distance, 1f/smooth);
+        currentVelocity.x = Mathf.Atan(currentAcceleration.x/ speed) * distance ;
+        currentVelocity.y = Mathf.Atan(currentAcceleration.y/ speed) * distance;
          //currentPosition += currentVelocity * deltaTime;
         //transform.position = currentPosition;
 
