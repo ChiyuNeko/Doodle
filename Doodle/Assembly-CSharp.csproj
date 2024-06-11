@@ -42,6 +42,7 @@
      <Compile Include="Assets\Stable-Diffusion-Unity-Integration\Scripts\StableDiffusionText2Image.cs" />
      <Compile Include="Assets\Script\ListAvailablePorts.cs" />
      <Compile Include="Assets\Script\KalmanFilter.cs" />
+     <Compile Include="Assets\Server.cs" />
      <Compile Include="Assets\Script\NewBehaviourScript.cs" />
      <Compile Include="Assets\Webcam.cs" />
      <Compile Include="Assets\Stable-Diffusion-Unity-Integration\Scripts\StableDiffusionImage2Material.cs" />

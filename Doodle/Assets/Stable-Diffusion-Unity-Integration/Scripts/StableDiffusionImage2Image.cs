@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
+
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -25,7 +28,10 @@ public class StableDiffusionImage2Image: StableDiffusionGenerator
     public string guid = "";
     public Webcam webcam;
     public Camera cam;
+    public RawImage serverReceive;
+    public Texture2D t2d;
     public Texture2D inputTexture;
+
     public string prompt;
     public string negativePrompt;
 
@@ -220,7 +226,7 @@ public class StableDiffusionImage2Image: StableDiffusionGenerator
                     webcamimg.SetPixels(webcam.webCam.GetPixels());
                     webcamimg.Apply();
                     inputImgBytes = webcamimg.EncodeToPNG();
-                    Debug.Log(inputImgBytes);
+                    Debug.Log("1");
                 }
 
                 else if(cam)
@@ -234,8 +240,15 @@ public class StableDiffusionImage2Image: StableDiffusionGenerator
                     CamImage.Apply();
                     RenderTexture.active = currentRT;
                     inputImgBytes = CamImage.EncodeToPNG();
-                    Debug.Log(inputImgBytes);
+                    Debug.Log("2");
                 }
+                else if(serverReceive)
+                {
+                        t2d = serverReceive.texture as Texture2D;
+                        inputImgBytes = t2d.EncodeToPNG();
+                        Debug.Log("3");
+                }
+                
                 string inputImgString = Convert.ToBase64String(inputImgBytes);
 
                 SDParamsInImg2Img sd = new SDParamsInImg2Img();
