@@ -369,6 +369,7 @@
 "Assets/Script/New Folder/MotionTrackinYPR.cs"
 "Assets/Script/NewBehaviourScript.cs"
 "Assets/Script/ObjectMovementController.cs"
+"Assets/Server.cs"
 "Assets/Stable-Diffusion-Unity-Integration/Scripts/ReadOnlyAttribute.cs"
 "Assets/Stable-Diffusion-Unity-Integration/Scripts/SDSettings.cs"
 "Assets/Stable-Diffusion-Unity-Integration/Scripts/StableDiffusionConfiguration.cs"
