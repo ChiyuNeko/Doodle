@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638531994771003877
-    m_Hash: 2692658881
+      ticks: 638539732898938954
+    m_Hash: 472593792
   m_LockFileStatus:
     m_FilePath: C:/Project/doodle/Doodle/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638531994771033876
-    m_Hash: 653778938
+      ticks: 638539732898964047
+    m_Hash: 3489380641
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -211,7 +211,7 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.ide.visualstudio
-    version: 2.0.17
+    version: 2.0.22
   - name: com.unity.test-framework
     version: 1.1.31
   - name: com.unity.ext.nunit
@@ -357,12 +357,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.18
     nextVersion: 
-- packageId: com.unity.ide.visualstudio@2.0.17
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
-  version: 2.0.17
+  version: 2.0.22
   source: 1
-  resolvedPath: C:\Project\doodle\Doodle\Library\PackageCache\com.unity.ide.visualstudio@2.0.17
+  resolvedPath: C:\Project\doodle\Doodle\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -371,7 +371,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -433,13 +433,13 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 638059987360000000
+  datePublishedTicks: 638326061910000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: 1f126893bfb18ea9661fb15771613e841467073c
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
     version: 2.0.17
@@ -505,6 +505,81 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.2.5
+    nextVersion: 
+- packageId: com.unity.mobile.android-logcat@1.3.2
+  testable: 0
+  isDirectDependency: 1
+  version: 1.3.2
+  source: 1
+  resolvedPath: C:\Project\doodle\Doodle\Library\PackageCache\com.unity.mobile.android-logcat@1.3.2
+  assetPath: Packages/com.unity.mobile.android-logcat
+  name: com.unity.mobile.android-logcat
+  displayName: Android Logcat
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: "Android Logcat package provides support for:\n - Android log messages\n
+    - Android application memory statistics\n - Android Screen Capture\n - Android
+    Screen Recorder\n - Stacktrace Utility\n\nClick the 'View documentation' link
+    above for more information.\n\nThe window can be accessed in Unity Editor via
+    'Window > Analysis > Android Logcat', or simply by pressing 'Alt+6' on Windows
+    or 'Option+6' on macOS. \n\nMake sure to have Android module loaded and switch
+    to Android build target in 'Build Settings' window if the menu doesn't exist."
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.5-preview
+    - 0.2.7-preview
+    - 1.0.0
+    - 1.0.1-preview
+    - 1.0.3-preview
+    - 1.1.0
+    - 1.1.1
+    - 1.2.0-preview
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 1.3.2
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    compatible:
+    - 1.3.2
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    verified: 1.3.2
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - Mobile
+  - Android
+  - Logcat
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 637859722170000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.mobile.logcat.git
+    revision: 3ac2137ceeb55e2f8b7e4ce15c940a7257591fd8
+    path: 
+  unityLifecycle:
+    version: 1.3.2
     nextVersion: 
 - packageId: com.unity.nuget.newtonsoft-json@3.2.1
   testable: 0

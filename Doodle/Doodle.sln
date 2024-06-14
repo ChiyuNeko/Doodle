@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.TestRunner", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TestTools.CodeCoverage.Editor", "Unity.TestTools.CodeCoverage.Editor.csproj", "{97fe38ef-1eb2-4c14-ad4e-4a5e07c00e00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mobile.AndroidLogcat.Editor", "Unity.Mobile.AndroidLogcat.Editor.csproj", "{e2e07547-a4db-6e63-c084-3506f034625e}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Rider.Editor", "Unity.Rider.Editor.csproj", "{417f2a31-1bf2-2bb0-e217-74d3c8fd8b7a}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Performance.Profile-Analyzer.Editor", "Unity.Performance.Profile-Analyzer.Editor.csproj", "{4489b107-8868-8f19-70d6-e6bceb10db91}"
@@ -136,6 +138,8 @@ Global
 		{e234eca3-0979-8f8f-e822-16aed0478cdb}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97fe38ef-1eb2-4c14-ad4e-4a5e07c00e00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97fe38ef-1eb2-4c14-ad4e-4a5e07c00e00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e2e07547-a4db-6e63-c084-3506f034625e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e2e07547-a4db-6e63-c084-3506f034625e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{417f2a31-1bf2-2bb0-e217-74d3c8fd8b7a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{417f2a31-1bf2-2bb0-e217-74d3c8fd8b7a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4489b107-8868-8f19-70d6-e6bceb10db91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
