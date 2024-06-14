@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
@@ -17,7 +18,10 @@ public class Server : MonoBehaviour {
 	int readTimes = 0;
 
     public RawImage rawImage;
-    public Texture2D texture2D;
+    public int port = 10002;
+    public String IP = "127.0.0.1";
+    public int count = 0;
+   
 
     private Queue<byte[]> datas;
 
@@ -26,7 +30,7 @@ public class Server : MonoBehaviour {
 
         // 创建服务器, 以Tcp的方式
 		socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-		socket.Connect(IPAddress.Parse("127.0.0.1"), 10002);
+		socket.Connect(IPAddress.Parse(IP), port);
 
         // 开启一个线程, 用于接受数据
 		thread = new Thread(new ThreadStart(Receive));
@@ -40,11 +44,31 @@ public class Server : MonoBehaviour {
         while (thread.ThreadState == ThreadState.Running && socket.Connected)
         {
             // 接受数据Buffer count是数据的长度
-			int count = socket.Receive(buffer);
-            if (receState && count > 0)
+            int size = 0;
+            List<byte> a = new List<byte>();
+            bool ending = false;
+            byte[] sending = new byte[6]{1,1,4,5,1,4};
+            do
             {
-				receState = false;
-                BytesToImage(count, buffer);
+                int count = socket.Receive(buffer);
+                size += count;
+                Byte[] result = new Byte[count];
+                Array.Copy(buffer, 0, result, 0, count);
+                a.AddRange(result);
+                if (count >= 6)
+                {
+                    Byte[] results = new Byte[6];
+                    Array.Copy(buffer, count - 6, results, 0, 6);
+                    ending = results.SequenceEqual(sending);
+                }
+            }
+            while(!ending);
+            if (receState && a.Count > 0)
+            {
+                receState = false;
+                BytesToImage(a.Count - 6, a.ToArray());
+                Debug.Log(a.ToArray().Length);
+                Debug.Log(size);
             }
         }
     }
@@ -76,6 +100,7 @@ public class Server : MonoBehaviour {
     {
         if (datas.Count > 0)
         {
+            //Debug.Log("接收數據:" + (float)datas.Count);
             // 处理纹理数据，并显示
             Texture2D texture2D = new Texture2D(Screen.width, Screen.height);
             texture2D.LoadImage(datas.Dequeue());
@@ -105,4 +130,7 @@ public class Server : MonoBehaviour {
 
         datas.Clear();
     }
+
+    
 }
+
