@@ -21,6 +21,7 @@ public class Server : MonoBehaviour {
     public int port = 10002;
     public String IP = "127.0.0.1";
     public int count = 0;
+    public StableDiffusionImage2Image stableDiffusionImage2Image;
    
 
     private Queue<byte[]> datas;
@@ -105,6 +106,7 @@ public class Server : MonoBehaviour {
             Texture2D texture2D = new Texture2D(Screen.width, Screen.height);
             texture2D.LoadImage(datas.Dequeue());
             rawImage.texture = texture2D;
+            stableDiffusionImage2Image.Generate();
         }
     }
 
